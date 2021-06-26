@@ -1,0 +1,29 @@
+{% block top_navigation_bar %}
+    <div class="TopNavigationBar" id="TopNav" dir="rtl">
+        <button id="openbtn" class="openbtn" onclick="openNav()"><img class="top_nav_btn" id="openbtn_img"
+                                                                      src="../../../static/media/menu.png"></button>
+        <button class="empanadasbtn" onclick="window.location.href='/shop'"><img
+                class="top_nav_btn" id="empanadasbtn_img" src="../../../static/media/dark_blue_emp.png"></button>
+        <button class="shoppingCartbtn" onclick="window.location.href='/shopping_cart'">
+            <img class="top_nav_btn" id="shoppingCartbtn_img" src="../../../static/media/shopping_cart.png"></button>
+        <button class="phonebtn" onclick="window.location.href='/contact'"><img
+                class="top_nav_btn" id="phonebtn_img" src="../../../static/media/big_phone.png"></button>
+        <button class="newMembertn" onclick="window.location.href='/registration'"><img
+                class="top_nav_btn" id="newMembertn_img" class="newMembertn_img"
+                src="../../../static/media/new_member.png">
+        </button>
+        {% if session.get("is_logged_in")|default(False) %}
+            <div id="greeting" dir="ltr">
+                <p> !{{ session.get("full_name") }}&nbsp;היי&nbsp;</p>
+            </div>
+        {% endif %}
+        <div id="emp_in_the_side">
+            <img id="nav smile empanadas" src="../../../static/media/smile_empanadas.png" alt="smile empanadas image"
+                 height="50px">
+        </div>
+        <div id="text_in_the_side" dir="ltr">
+            <p id="text_top_nav"> Carlos & <br> Empanadas </p>
+        </div>
+    </div>
+{% endblock %}
+

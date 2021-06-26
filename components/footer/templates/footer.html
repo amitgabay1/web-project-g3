@@ -1,0 +1,25 @@
+{% block page_body_footer %}
+    <div id="footer" class="footer" dir="rtl">
+        <a id="homePage"><span class="footerLable"><p id="homeP" onclick="goToPage('homePage','home')"
+                                                      onmouseover="changePointer('homeP','pointer');"
+                                                      onmouseout="changePointer('homeP','default');">ראשי</p></span></a>
+
+        <a id="contactPage"><span class="footerLable"><p id="contactP"
+                                                         onclick="goToPage('contactPage','/contact')"
+                                                         onmouseover="changePointer('contactP','pointer');"
+                                                         onmouseout="changePointer('contactP','default');">|צור קשר</p></span></a>
+
+        <a id="policyPage"><span class="footerLable"><p id="PolicyP" onclick="goToPage('policyPage','/policy')"
+                                                        onmouseover="changePointer('PolicyP','pointer');"
+                                                        onmouseout="changePointer('PolicyP','default');">|מדיניות</p></span></a>
+
+        <a id="shopPage"><span class="footerLable"><p id="shopP" onclick="goToPage('shopPage','/shop')"
+                                                      onmouseover="changePointer('shopP','pointer');"
+                                                      onmouseout="changePointer('shopP','default');">|הזמנות</p></span></a>
+
+        <a id="questionsPage"><span class="footerLable"><p id="questionP"
+                                                           onclick="goToPage('questionsPage','/questions')"
+                                                           onmouseover="changePointer('questionP','pointer');"
+                                                           onmouseout="changePointer('questionP','default');">|שאלות נפוצות</p></span></a>
+    </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = "Shopping" %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{url_for('shop.static', filename='css/shop.css')}}"/>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('shop.static', filename='js/shop.js') }}"
+            crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block page_body_main %}
+    <body class="body_shop_page">
+    <p class="subtitle fancy"><span> האמפנדס של קרלוס </span></p>
+    <div class="row">
+        {% for product in products %}
+            <div class="column">
+                <img class="ShopPic" src="{{ product["img"] }}" alt="{{ product["id"] }}">
+                <div class="btn-group">
+                    <p id="{{ "price" + product["id"]|string }}" class="empanadas-price price">{{ product["price"] }}</p>
+                    <input type="button" value="-" class="button-minus" data-field="quantity">
+                    <input type="number" step="1" max="" value="{{ shopping_cart[product["id"]|string]|default(0) }}" name="quantity" id="{{ "quantity" + product["id"]|string }}"
+                           class="quantity-field">
+                    <input type="button" value="+" class="button-plus" data-field="quantity">
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+    <p class="total-price-text" id="totalPriceText">0</p>
+    <input type="hidden" name="totalPrice" id="totalPrice" value="0"/>
+    <button class="payment" onclick="window.location.href='/shopping_cart'"> לעגלת הקניות</button>
+    </body>
+{% endblock %}

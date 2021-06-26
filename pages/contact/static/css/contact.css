@@ -1,0 +1,82 @@
+.body_contact {
+    background-image: url(../../../../static/media/background_main_page.png);
+}
+
+input[type=text], select, textarea {
+    width: 20%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    font-family: calibri, serif;
+}
+
+input[type=submit] {
+    background-color: rgb(244, 162, 97);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: calibri, serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(243, 131, 42);
+    font-family: calibri, serif;
+}
+
+.ways {
+    box-shadow: 0 1vh 2vh 0 rgba(0, 0, 0, 0.15);
+    font-family: calibri, serif;
+    padding: 20px;
+    font-size: 20px;
+    background-color: rgba(233, 196, 106, 0.8);
+    width: 500px;
+    float: right;
+    margin-right: 100px;
+}
+
+.text_ways {
+    font-size: 1.5vh;
+    text-align: right;
+
+}
+
+.small_text_ways {
+    font-size: 4vh;
+
+}
+
+.list_ways {
+    float: right;
+    direction: rtl;
+    padding-right: 10vh;
+    text-align: right;
+}
+
+#textarea_contact {
+    box-shadow: 0 1vh 2vh 0 rgba(0, 0, 0, 0.15);
+    height: 100px;
+    width: 400px;
+    resize: none;
+}
+
+.map_contact {
+    margin-right: 125vh;
+    margin-top: 60px;
+}
+
+#map_box {
+    border-color: rgb(252, 203, 61);
+    border-width: 1vh;
+    border-radius: 5%;
+    width: 60vh;
+    height: 55vh;
+}
+
+.waysNavigation {
+    margin-left: 150px;
+}

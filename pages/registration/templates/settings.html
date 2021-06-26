@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = "Settings" %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('registration.static', filename='css/registration.css') }}"/>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('registration.static', filename='js/registration.js') }}"
+            crossorigin="anonymous"></script>
+    <script src="{{ url_for('registration.static', filename='js/settings.js') }}"
+            crossorigin="anonymous"></script>
+
+    <script
+            src="https://kit.fontawesome.com/64d58efce2.js"
+            crossorigin="anonymous"
+    ></script>
+{% endblock %}
+
+{% block page_body_main %}
+    <body class="body_registration">
+    <div class="container" id="main">
+        <div class="forms-container">
+            <div class="signin-signup">
+                {% if change_password_mode|default(false) %}
+                    <form>
+                        <h2 class="title">שינוי סיסמא</h2>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="change-pass-old" name="old-password" placeholder="סיסמא נוכחית"/>
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="change-pass-new" name="new-password" placeholder="סיסמא חדשה"/>
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="change-pass-new-again" name="new-password-again"
+                                   placeholder="שוב פעם סיסמא חדשה ככה לכיף"/>
+                        </div>
+                        <input type="submit" value="החלף סיסמא" class="btn solid" onclick="changePassword()"/>
+                    </form>
+                {% elif session.get("is_logged_in")|default(False) %}
+                    <form action="/change_password" method="get">
+                        <input type="button" value="התנתק" class="btn solid" onclick="signOut()"/>
+                        <input type="submit" value="שנה סיסמה" class="btn solid"/>
+                        <input type="button" value="מחק חשבון" class="btn solid" onclick="deleteAccount()"/>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    </body>
+{% endblock %}

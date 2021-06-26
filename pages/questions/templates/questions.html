@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = "What's the Question" %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{url_for('questions.static', filename='css/questions.css')}}"/>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('questions.static', filename='js/questions.js') }}"
+            crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block page_body_main %}
+    <body class="body_question_page">
+        <div class="main" id="main" dir="rtl">
+            <div class="header">
+                <h2 id="header_QA">מה השאלה ? </h2>
+            </div>
+
+            <div class="Question" dir="rtl">
+                <br><br>
+                <button class="collapsible" onclick="openQuestion('content1')"> כמה זמן אני אצטרך לחכות לאמפנדס שהזמנתי
+                    ?
+                </button>
+                <div class="answer" id="content1" style="display: none">קרלוס משקיע בכל אמפנדס ואמפנדס ולכן מרגע ההזמנה
+                    ייקחו בין 3 ל-4 שעות עד שהאמפנדס יגיעו אליכם.
+                </div>
+                <br><br>
+
+                <button class="collapsible" onclick="openQuestion('content2')">אני יכול ללמוד להכין אמפנדס כמו של קרלוס
+                    ?
+                </button>
+                <div class="answer" id="content2" style="display: none">כן !! קרלוס מציע סדנאות אמפנדס מיוחדות וטעימות
+                    בהן תוכלו ללמוד איך את האמפנדס בעצמכם. כנסו לדף "סדנאות" לעוד פרטים.
+                </div>
+                <br><br>
+
+                <button class="collapsible" onclick="openQuestion('content3')">האם האמפנדס כשרים ?</button>
+                <div class="answer" id="content3" style="display: none">בערך, קרלוס מקפיד על הפרדה בין בשר לחלב אבל אין
+                    לנו תעודת כשרות.
+                </div>
+                <br><br>
+
+                <button class="collapsible" onclick="openQuestion('content4')">מה מיוחד במועדון הלקוחות של קרלוס ?
+                </button>
+                <div class="answer" id="content4" style="display: none">כל הלקוחות במועדון הלקוחות של קרלוס נהנים
+                    מהטבות ומבצעים יחודיים לחברים בלבד! כנסו עכשיו לדף "הרשמה" ותתחילו להנות!
+                </div>
+                <br><br><br><br>
+
+                <div class="Order_button" dir="rtl">
+                    <button class="Order_button_pages" onclick="window.location.href='/shop'"> אין יותר שאלות... אני
+                        רוצה להזמין !
+                    </button>
+                </div>
+                <br><br>
+            </div>
+            <br><br>
+        </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = "Contact Us" %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('contact.static', filename='css/contact.css') }}"/>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+            defer></script>
+    <script src="{{ url_for('contact.static', filename='js/contact.js') }}"
+            crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block page_body_main %}
+    <body class="body_contact">
+    <div class="main main-contact" id="main" dir="rtl">
+        <div class="header" dir="rtl">
+            <h2 id="header">צור קשר</h2>
+        </div>
+
+        <div class="ways" dir="rtl">
+            <p class="text_ways"><b class="small_text_ways">כתובת:</b></p>
+            <p>
+            <ul>
+                <li>רחוב הבצקים 5, באר שבע</li>
+            </ul>
+            </p>
+            <p class="text_ways"><b class="small_text_ways">יצירת קשר:</b></p>
+            <ul class="list_ways">
+                <li>טלפון: 052-1113271</li>
+                <li> אימייל: Carlos@Empanadas.co.il</li>
+            </ul>
+            <br><br><br><br>
+            <form action="/contact" method="POST" name="client_request" id="client_request">
+                <p class="text_ways"><b class="small_text_ways">כתבו לנו:</b></p>
+                <textarea id="textarea_contact" name="message" placeholder="קרלוס רצינו לספר לך ש..."
+                          dir="rtl"></textarea><br><br>
+                <input type="submit" value="שלח" onclick="send_client_request()">
+                {% if message_sent %}
+                    <p>תודה על פנייתך!</p>
+                {% endif %}
+            </form>
+        </div>
+
+        <div class="map_contact">
+            <iframe id="map_box" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96169.07947382829!2d-71.409954551555!3d-41.128331640414906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x961a7b1520c860e5%3A0x8210ae97
+               cb7b9a65!2sSan%20Carlos%20de%20Bariloche%2C%20R%C3%ADo%20Negro%2C%20Argentina!5e0!3m2!1sen!2sin!4v1620132083082!5m2!1sen!2sin"
+                    frameborder="0"></iframe>
+            <div class="waysNavigation">
+                <a href="https://moovitapp.com/israel-1/poi/en" target="_blank">
+                    <img src="../../../static/media/moovit_image.png" alt="image of Moovit symbol" width="50px"></a>
+                <a href="https://www.waze.com/he/live-map?utm_campaign=waze_website" target="_blank">
+                    <img src="../../../static/media/waze_image.png" alt="image of Waze symbol" width="50px"></a>
+            </div>
+        </div>
+    </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,179 @@
+/*----------------------The top menu-------------------*/
+
+.TopNavigationBar {
+    background-color: rgb(38, 70, 83);
+    display:flex;
+    box-shadow: 0 1vh 2vh 0 rgba(0,0,0,0.5);
+    text-align: center;
+    top: 0;
+    position: sticky;
+    justify-content:flex-start ;
+    height: 70px;
+    z-index: 2;
+}
+
+#emp_in_the_side{
+    margin-right: 60%;
+    margin-top: 1.5vh;
+}
+
+#text_in_the_side{
+    margin-right: -12%;
+    margin-top: 0.5vh;
+    color: white;
+    font-family: Trebuchet MS, sans-serif;
+    text-align:left;
+}
+
+#greeting {
+    margin-top: 0.5vh;
+    color: white;
+    font-family: Trebuchet MS, sans-serif;
+    text-align:left;
+}
+
+
+/*---------------------buttons top bar-------------------*/
+
+/*---------open button---------*/
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(38, 70, 83);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+.openbtn:hover {
+  background-color: rgb(2, 48, 71);
+}
+
+#openbtn_img{
+    margin-top:-0.5vh;
+    height: 100%;
+
+}
+
+/*---------phone button---------*/
+.phonebtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(38, 70, 83);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  margin-top:0;
+}
+.phonebtn:hover {
+  background-color: rgb(2, 48, 71);
+}
+#phonebtn_img{
+    margin-top:-0.5vh;
+    height: 120%;
+}
+
+/*---------shopping cart button---------*/
+.shoppingCartbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(38, 70, 83);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+.shoppingCartbtn:hover {
+  background-color: rgb(2, 48, 71);
+}
+
+#shoppingCartbtn_img{
+   height: 100%;
+}
+/*---------empanadas button---------*/
+.empanadasbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(38, 70, 83);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  margin-top:0;
+}
+.empanadasbtn:hover {
+  background-color: rgb(2, 48, 71);
+}
+
+#empanadasbtn_img{
+    margin-top:0;
+    height: 90%;
+}
+
+/*---------new member button---------*/
+.newMembertn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(38, 70, 83);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  margin-top:0;
+}
+.newMembertn:hover {
+  background-color: rgb(2, 48, 71);
+}
+
+#newMembertn_img{
+    height: 100%;
+}
+
+/*----------------------The sidebar menu -------------------*/
+
+.sideNavigationBar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgb(244, 162, 97);
+  overflow-x: hidden;
+  padding-top: 100px;
+  box-shadow: 0 1vh 2vh 0 rgba(0,0,0,0.5);
+  text-align: right;
+  transition: 0.5s;
+}
+
+
+.sideNavigationBar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(38, 70, 83);
+  display: block;
+  transition: 0.5s;
+  font-family: Calibri, serif;
+}
+
+
+.sideNavigationBar a:hover {
+  color: white;
+}
+
+
+.sideNavigationBar .closebtn {
+  position: absolute;
+  top: 80px;
+  left: 45px;
+  font-size: 30px;
+  margin-left: 50px;
+}
+
+
+#main {
+  transition: margin .5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sideNavigationBar {padding-top: 15px;}
+  .sideNavigationBar a {font-size: 18px;}
+}

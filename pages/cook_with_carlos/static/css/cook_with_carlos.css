@@ -1,0 +1,51 @@
+.body_cooking_class {
+    background-image: url(../media/cooking_class_background.png);
+    background-size: 100%;
+}
+
+.box_cooking {
+    width: 40%;
+    padding: 30px;
+    border-style: double;
+    font-family: calibri, serif;
+    font-size: 20px;
+    margin-right: 60vh;
+    text-align: center;
+    border-radius: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cooking_with_carlos_btn {
+    cursor: pointer;
+    box-shadow: 0 1vh 2vh 0 rgba(0, 0, 0, 0.15);
+    background-color: rgb(152, 193, 217);
+    color: white;
+    padding: 12px 16px;
+    display: inline-block;
+    font-weight: bold;
+    font-family: Calibri, serif;
+    font-size: 20px;
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(38, 70, 83);
+    margin-top: 0;
+}
+
+.cooking_with_carlos_btn:hover {
+    background-color: rgb(130, 184, 219);
+}
+
+#cooking_header {
+    background-color: rgba(152, 193, 217, 0.8);
+}
+
+#cooking_with_carlos_btn_image {
+    height: 5vh;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+#video_cooking {
+    border-style: double;
+}

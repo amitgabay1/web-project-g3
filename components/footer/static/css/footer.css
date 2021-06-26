@@ -1,0 +1,10 @@
+.footer {
+    background-color: rgb(250, 237, 203);;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 70px;
+    padding: 1vh 3vh 1vh 3vh;
+    font-family: Calibri, serif;
+    font-size: 20px;
+}

@@ -1,0 +1,82 @@
+.body_paying {
+    background-color: rgb(250, 237, 203);
+    justify-items: center;
+    text-align: center;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+    grid-gap: 0;
+    margin: 0;
+}
+
+.header1 {
+    color: black;
+    text-align: center;
+    padding: 1vh 0 1vh 0;
+    font-family: Calibri;
+    font-size: 32px;
+}
+
+.textHeader1 {
+    font-size: 80px;
+    -webkit-text-stroke: 0.2vh black;
+    line-height: 0;
+    padding: 1vh 0 1vh 0;
+}
+
+.FormDetails {
+    font-size: 3vh;
+    color: black;
+    font-family: Calibri;
+}
+
+.textPaying {
+    color: black;
+    font-size: 3vh;
+    margin: 1vh;
+}
+
+.payingInput {
+    font-size: 15px;
+    color: rgba(77, 81, 87, 1);
+    width: 25%;
+    padding: 3px 3px 3px 3px;
+    border: 1px solid #ccc;
+    border-radius: 0.5vh;
+    box-sizing: border-box;
+    resize: vertical;
+    margin-bottom: 0.5vh;
+    text-align: right;
+    font-family: MPLUSRounded, serif;
+}
+
+
+.buttonPay {
+    background-color: rgb(233, 196, 106);
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+    font-family: Calibri, serif;
+    width: 20vh;
+    top: 2vh;
+    left: 2vh;
+    border-radius: 1vh;
+    position: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.buttonPay:hover {
+    background-color: rgb(252, 191, 73);
+}
+
+.BackCart {
+    position: center;
+    text-decoration: none;
+    color: black;
+    font-family: Calibri;
+    font-size: 22px;
+    font-weight: bold;
+
+}

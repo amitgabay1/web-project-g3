@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = "Sign in & Sign up" %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('registration.static', filename='css/registration.css') }}"/>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('registration.static', filename='js/registration.js') }}"
+            crossorigin="anonymous"></script>
+    <script
+            src="https://kit.fontawesome.com/64d58efce2.js"
+            crossorigin="anonymous"
+    ></script>
+{% endblock %}
+
+{% block page_body_main %}
+    <body class="body_registration">
+    <div class="container" id="main">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="/sign_in" method="POST" id="sign-in-form" class="sign-in-form">
+                    <h2 class="title">לקוחות ותיקים</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="sign-in-email" name="username" placeholder="אימייל"/>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="sign-in-password" name="password" placeholder="סיסמא"/>
+                    </div>
+                    <input type="submit" value="היכנס" class="btn solid" onclick="signIn()"/>
+                </form>
+
+                <form action="/sign_up" method="POST" id="sign-up-form" class="sign-up-form">
+                    <h2 class="title">הרשמה</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="username" id="sign-up-username" placeholder="שם מלא"/>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email" id="sign-up-email" placeholder="אימייל"/>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" id="sign-up-password" placeholder="סיסמא"/>
+                    </div>
+                    <input type="submit" class="btn" value="הירשם" onclick="signUp()"/>
+                </form>
+            </div>
+        </div>
+
+        {% if not session.get("is_logged_in")|default(False) %}
+            <div class="panels-container">
+                <div class="panel left-panel">
+                    <div class="content">
+                        <h3>? חדש פה </h3>
+                        <p>
+                            קרלוס מזמין אתכם להירשם למועדון הלקוחות האקסלוסיבי שלו! הירשמו ותוכלו להנות מהטבות ומבצעים
+                            מיוחדים לחברי מועדון בלבד
+                        </p>
+                        <button class="btn transparent" id="sign-up-btn">
+                            הרשמה
+                        </button>
+                    </div>
+                    <img src="img/chef.svg" class="image" alt=""/>
+                </div>
+                <div class="panel right-panel">
+                    <div class="content">
+                        <h3>? לקוח ותיק </h3>
+                        <p>
+                            יכול להיות שכבר נפגשנו בעבר ? אם אתם רשומים לאתר לחצו כאן
+                        </p>
+                        <button class="btn transparent" id="sign-in-btn">
+                            כניסה
+                        </button>
+                    </div>
+                    <img src="img/chef.svg" class="image" alt=""/>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    </body>
+{% endblock %}

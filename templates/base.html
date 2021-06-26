@@ -1,0 +1,96 @@
+{#
+Base page variables:
+-- page_lang | default: 'en'
+-- page_head_title_author | default: 'Carlos'
+-- page_head_title | default: 'Carlos & Empanadas'
+#}
+
+{#
+Base page blocks:
+- head
+-- page_head
+-- page_head_meta
+--- page_head_meta_extra
+-- page_head_css
+
+- body
+-- page_body_content
+--- page_body_header
+---- page_body_header_content
+----- page_body_header_content__main_menu
+------ page_body_header_content__main_menu_content
+------- page_body_header_content__main_menu_content_links
+--- page_body_main
+---- page_body_main_content
+--- page_body_footer
+---- page_body_footer_content
+-- page_body_js
+ #}
+<!DOCTYPE html>
+<html lang="{{ page_lang|default("en", true) }}">
+<head>
+    {% block page_head %}
+        {# Title #}
+        <title>{{ page_head_title|default('Cerlos & Empanadas', true) }}</title>
+
+        {# Meta tags #}
+        {% block page_head_meta %}
+            <base href="/"/>
+            <meta charset="UTF-8"/>
+            <meta name="author" content="Carlos"/>
+            {% block page_head_meta_extra %}
+            {% endblock %}
+        {% endblock %}
+
+        {# favicon #}
+        <link rel="icon" href="{{ url_for('static', filename='media/img/favicon/flask-favicon.png') }}"/>
+
+        {# Base #}
+        <base href="/"/>
+
+        {# CSS #}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}"/>
+        <link rel="stylesheet" href="{{ url_for('top_navigation_bar.static', filename='css/top_navigation_bar.css') }}"/>
+        <link rel="stylesheet" href="{{ url_for('side_navigation_bar.static', filename='css/side_navigation_bar.css') }}"/>
+        <link rel="stylesheet" href="{{ url_for('footer.static', filename='css/footer.css') }}"/>
+        {% block page_head_css %}{% endblock %}
+    {% endblock %}
+</head>
+<body>
+{% block page_body_content %}
+
+    {# Header #}
+    {% block page_body_header %}
+        <header class="page-header">
+            {% block page_body_header_content %}
+                {# Top Navigation Bar #}
+                {% block top_navigation_bar %}
+                    {% include '/top_navigation_bar.html' %}
+                {% endblock %}
+
+                {# Side Navigation Bar #}
+                {% block side_navigation_bar %}
+                    {% include '/side_navigation_bar.html' %}
+                {% endblock %}
+            {% endblock %}
+        </header>
+    {% endblock %}
+
+    {# Main #}
+    {% block page_body_main %}
+    {% endblock %}
+
+    {# Footer #}
+    {% block page_body_footer %}
+        {% include '/footer.html' %}
+    {% endblock %}
+
+{% endblock %}
+
+{# JS #}
+<script src="{{ url_for('static', filename='js/base.js') }}"></script>
+<script src="{{ url_for('side_navigation_bar.static', filename='js/side_navigation_bar.js') }}"></script>
+<script src="{{ url_for('footer.static', filename='js/footer.js') }}"></script>
+{% block page_body_js %}{% endblock %}
+</body>
+</html>

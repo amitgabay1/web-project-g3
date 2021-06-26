@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = "Carlos Story" %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{url_for('carlos_story.static', filename='css/carlos_story.css')}}"/>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('carlos_story.static', filename='js/carlos_story.js') }}"
+            crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block page_body_main %}
+    <body class="body_carlos_story" onload="Typewriter()">
+        <div class="main" id="main" dir="rtl">
+            <div class="header">
+                <h2 id="header">הסיפור של קרלוס </h2>
+            </div>
+
+            <div class="box_left">
+                <img id="carlosPhoto" src="../../../static/media/carlos.png" alt="the image is not available">
+            </div>
+
+            <div class="box_right"><br>
+                <p id="Typewriter"><b></b></p>
+                <div class="aboutMe" id="aboutMe"><p class="aboutMe">
+                    רוברטו קרלוס נולד ב-1946 בבארילוצ'ה שבארגנטינה ועלה לישראל עם אהובתו בשנת 1999. <br>
+                    מאז ומתמיד קרלוס מכין את האמפנדס לפי המתכון של סבתו לחברים ולבני משפחה. <br>
+                    מאז תחילת תקופת הקורונה, קרלוס החל למכור את האמפנדס המוכר והאהוב גם לקהל הרחב. <br>
+                    אז בואו נכיר את התפריט של הבית: כל האמפנדס עשויים מחומרי גלם איכותיים ובריאים, <br>
+                    מה שמעניק לאוכל את הטעם המיוחד של הבית הארגנטינאי האותנטי.<br>
+                    באתר תוכלו לבחור אפמנדס במגוון מילויים- בשרי, חלבי, טבעוני ואפילו מתוק!
+                </p></div>
+
+                <div class="Order_button" dir="rtl">
+                    <br>
+                    <button class="Order_button_pages" onclick="window.location.href='/shop'"> נהייתי רעב... אני רוצה
+                        להזמין
+                        !
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+{% endblock %}

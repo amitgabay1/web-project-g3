@@ -1,0 +1,23 @@
+.box_policy {
+    width: 80%;
+    font-family: calibri, serif;
+    margin-right: 20vh;
+    font-size: 17px;
+    border-style: double;
+    border-width: 1px;
+    border-color: rgb(38, 70, 83);
+    background-color: rgb(250, 237, 203);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.body_policy {
+    background-image: url(../../../../static/media/background_main_page.png)
+}
+
+#policy {
+    font-size: 20px;
+    padding: 10vh;
+}
+
+

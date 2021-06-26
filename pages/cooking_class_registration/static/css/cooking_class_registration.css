@@ -1,0 +1,86 @@
+input[type=text], select, textarea {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: calibri, serif;
+}
+
+input[type=email], select, textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: calibri, serif;
+}
+
+input[type=phone], select, textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: calibri, serif;
+}
+
+input[type=number] {
+    width: 30%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: calibri, serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=submit] {
+    background-color: rgb(244, 162, 97);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: calibri, serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.body_cooking_class_registration {
+    background-color: rgb(254, 200, 154)
+}
+
+input[type=submit]:hover {
+    background-color: rgb(241, 143, 74);
+    font-family: calibri, serif;
+}
+
+option {
+    font-family: calibri, serif;
+    padding: 12px 20px;
+    font-size: 15px;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: rgb(254, 200, 154);
+    padding: 20px;
+    font-family: calibri, serif;
+}

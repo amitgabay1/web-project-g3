@@ -1,0 +1,25 @@
+/----------------------/
+/* For Small Screens */
+/-------------------/
+
+@media screen and (max-height: 450px) {
+  .main {
+    font-size: 40px;
+  }
+
+  .sidebar {
+    padding-top: 15px;
+  }
+
+  .sidebar a {
+    font-size: 18px;
+  }
+
+  .sideNavigationBar {
+    padding-top: 15px;
+  }
+
+  .sideNavigationBar a {
+    font-size: 18px;
+  }
+}

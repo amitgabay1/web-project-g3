@@ -1,0 +1,152 @@
+.body_shoppingCart {
+    background-color: rgb(250, 237, 203);
+}
+
+.fancy {
+    line-height: 0.5;
+    text-align: center;
+    font-size: 24px;
+    margin-top: -4vh;
+    text-shadow: -1px -1px 0;
+    font-family: Calibri, serif;
+}
+
+.fancy span {
+    display: inline-block;
+    position: relative;
+}
+
+.fancy span:before,
+.fancy span:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid black;
+    top: 0;
+    width: 250px;
+}
+
+.fancy span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.fancy span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+
+.ShopPicCart {
+    width: 8vh;
+    height: 8vh;
+    position: center;
+    padding-right: 1vh;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+}
+
+.shop_pic_items {
+    width: 16vh;
+    height: 16vh;
+    border-radius: 50%;
+}
+
+.empanadas-price {
+    position: relative;
+    background-color: rgb(250, 237, 203);
+    height: 3vh;
+    left: 3vh;
+    text-align: center;
+    width: 4vh;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 0 5px;
+    resize: vertical;
+    top: 0.1vh;
+    padding: 1px;
+}
+
+.button-payment {
+    background-color: rgb(233, 196, 106);
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+    font-family: Calibri, serif;
+    width: 13vh;
+    top: 2vh;
+    left: 2vh;
+    border-radius: 1vh;
+    position: relative;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.total-price-text {
+    position: relative;
+    content: " סך הכל ";
+    width: 50vh;
+    height: 5vh;
+    left: 37%;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+    text-align: center;
+    font-family: Calibri, serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.payment {
+    cursor: pointer;
+    margin-left: 42.5%;
+    box-shadow: 0 1vh 2vh 0 rgba(0, 0, 0, 0.5);
+    background-color: rgb(233, 196, 106);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Calibri, serif;
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(38, 70, 83);
+    padding: 10px 24px;
+    transition: margin 0.5s;
+    width: 30vh
+
+}
+
+.payment:hover {
+    background-color: rgb(252, 191, 73);
+}
+
+/*Button payment cart style */
+.price:before {
+    content: '₪';
+}
+
+/*Table cart style*/
+.table, th, tr {
+    width: 100%;
+    background: rgb(250, 237, 203);
+    font-size: 22px;
+    text-align: center;
+    font-family: Calibri, serif;
+    border: 1px solid black;
+    table-layout: fixed;
+    margin-top: 7vh;
+    border-collapse: collapse;
+}
+
+
+/*Cart header style*/
+.headerCart {
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: center;
+    font-family: Calibri, serif;
+}

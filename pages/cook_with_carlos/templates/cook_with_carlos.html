@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = "Cook With Carlos" %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{url_for('cook_with_carlos.static', filename='css/cook_with_carlos.css')}}"/>
+{% endblock %}
+
+{% block page_body_main %}
+    <body class="body_cooking_class" dir="rtl">
+        <div class="main" id="main" class="centered">
+            <div class="header">
+                <h2 id="cooking_header">לבשל עם קרלוס</h2>
+            </div>
+            <div class="box_cooking" dir="rtl"><br>
+                <iframe id="video_cooking" width="320" height="180"
+                        src="https://www.youtube.com/embed/zHByEMavG7U?autoplay=1&mute=1&playlist=zHByEMavG7U&loop=1"></iframe>
+                <p>
+                    סיפור האמפנדס של קרלוס מתחיל לפני שנים רבות בבארילוצ'ה שבארגנטינה...<br>
+                    אם תמיד חלמתם להכין אמפנדס בדיוק כמו של קרלוס,<br>
+                    הצטרפו לסדנאות האמפנדס ותוכלו גם אתם להנות מחוויה ייחודית<br>
+                    ואותנטית של הכנת אמפנדס ארגנטינאית אמיתית!<br>
+                    השאירו פרטים בטופס המצורף ונחזור אליכם לתיאום סדנא חוויתית וטעימה..
+                </p>
+                <button class="cooking_with_carlos_btn" value="Open Window" onclick="window.location.href='/cooking_class_registration'"> הרשמה
+                    לסדנא
+                </button>
+            </div>
+        </div>
+    </body>
+{% endblock %}

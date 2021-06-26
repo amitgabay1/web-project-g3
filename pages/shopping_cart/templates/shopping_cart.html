@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = "Shopping" %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{url_for('shopping_cart.static', filename='css/shopping_cart.css')}}"/>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('shopping_cart.static', filename='js/shopping_cart.js') }}"
+            crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block page_body_main %}
+    <body class="body_shoppingCart">
+    <p class="subtitle fancy"><span> עגלת הקניות שלי </span>
+    <table class="table" id="ShopCart">
+        <tr>
+            <th class="table">מחיקה</th>
+            <th class="table">כמות</th>
+            <th class="table">מחיר</th>
+            <th class="table">שם מוצר</th>
+            <th class="table">תמונה</th>
+        </tr>
+        {% for product in products %}
+            <tr id="{{ "product"+product["id"]|string }}">
+                <td>
+                    <img src="../../../static/media/XSign.png" alt="delete button" class="ShopPicCart deleteButton">
+                </td>
+                <td>
+                    <input type="button" value="-" class="button-minus" data-field="quantity"/>
+                    <input type="number" step="1" max="" value="{{ shopping_cart[product["id"]|string] }}"
+                           name="quantity" min="0" class="quantity-field"
+                           id="{{ "quantity" + product["id"]|string }}"/>
+                    <input type="button" value="+" class="button-plus" data-field="quantity"/>
+                </td>
+                <td class="headerCart price">{{ product["price"] }}</td>
+                <td class="headerCart">{{ product["product_name"] }}</td>
+                <td><br>
+                    <img class="shop_pic_items" class="ShopPicCart" src="{{ product["img"] }}"
+                         alt="{{ product["id"] }}">
+                </td>
+                <br>
+            </tr>
+        {% endfor %}
+    </table>
+    <p class="total-price-text" id="totalPriceText">0</p>
+    <input type="hidden" name="totalPrice" id="totalPrice" value="0"/>
+    {% if products|length > 0 %}
+        <button class="payment" onclick="window.location.href='/order'"> הזמנה</button>
+    {% endif %}
+    </body>
+{% endblock %}

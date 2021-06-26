@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = "Order Empanadas" %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{url_for('order.static', filename='css/order.css')}}"/>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('order.static', filename='js/order.js') }}"
+            crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block page_body_main %}
+    <div class="body_order" dir="rtl">
+        <div class="main" id="main" class="centered">
+            <div class="header">
+                <h2 id="header"> פרטי משלוח </h2>
+            </div>
+            <div class="box_cooking" dir="rtl"><br>
+                <form class="OrderForm">
+                    <label class="detail">אנא הזן את הפרטים הבאים:</label>
+                    <br><br>
+                    <label for="FirstName" class="detail"> שם פרטי</label><br>
+                    <input class="payInput" type="text" id="FirstName" required>
+                    <br>
+                    <label for="LastName" class="detail">שם משפחה </label><br>
+                    <input class="payInput" type="text" id="LastName" required>
+                    <br>
+                    <label for=Phone class="detail">מספר טלפון</label><br>
+                    <input class="payInput" type="phone" id="Phone" required>
+                    <br>
+                    <label for="email" class="detail">כתובת המייל לשליחת קבלה</label><br>
+                    <input class="payInput" type="email" id="email" required>
+                    <br>
+                    <label for="address" class="detail">כתובת למשלוח</label><br>
+                    <input class="payInput" id="address" type="text" required>
+                    <br>
+                    </a>
+                </form>
+                <button class="order_now_bp" onclick="window.location.href='/paying'"> מעבר לתשלום</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,176 @@
+.body_shop_page {
+    background-color: rgb(250, 237, 203);
+
+}
+
+.column {
+    float: left;
+    margin: 1vh 1.1vh 1.1vh;
+    width: 18%;
+    padding: 5px;
+}
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group {
+    cursor: pointer;
+    float: inside;
+    margin-top: 1vh;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    padding: 2vh;
+    font-family: calibri, serif;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+    font-family: calibri, serif;
+}
+
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.btn-group .button-minus,
+.btn-group .button-plus {
+    font-weight: bold;
+    background-color: rgb(250, 237, 203);
+    height: 3vh;
+    padding: 0;
+    width: 3vh;
+    right: -14vh;
+    position: relative;
+    outline: none;
+}
+
+input[type="button"] {
+    -webkit-appearance: none;
+    cursor: pointer;
+    font-family: calibri, serif;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+}
+
+input[type="price"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    content: "₪";
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.btn-group .quantity-field {
+    position: relative;
+    background-color: rgb(250, 237, 203);
+    height: 3vh;
+    right: -13vh;
+    text-align: center;
+    width: 13%;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0 0 5px;
+    resize: vertical;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+    padding: 3px;
+
+}
+
+input,
+textarea {
+    border: rgb(255, 249, 179);
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding: 10px;
+}
+
+.ShopPic {
+    width: 100%;
+}
+
+.fancy {
+    line-height: 0.5;
+    text-align: center;
+    font-size: 24px;
+    text-shadow: -1px -1px 0;
+    font-family: Calibri, serif;
+}
+
+.fancy span {
+    display: inline-block;
+    position: relative;
+}
+
+.fancy span:before,
+.fancy span:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid black;
+    top: 0;
+    width: 250px;
+}
+
+.fancy span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.fancy span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+.total-price-text {
+    position: relative;
+    content: " סך הכל ";
+    width: 50vh;
+    left: 37%;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+    text-align: center;
+    font-family: Calibri, serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.payment {
+    cursor: pointer;
+    margin-left: 42.5%;
+    box-shadow: 0 1vh 2vh 0 rgba(0, 0, 0, 0.5);
+    background-color: rgb(233, 196, 106);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Calibri, serif;
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(38, 70, 83);
+    padding: 10px 24px;
+    transition: margin 0.5s;
+}
+
+.payment:hover {
+    background-color: rgb(252, 191, 73);
+}

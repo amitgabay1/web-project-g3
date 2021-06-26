@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{url_for('home.static', filename='css/home.css')}}"/>
+{% endblock %}
+
+{% block page_body_main %}
+    <body class="body_home">
+    <p id="main_text"> Carlos & Empanadas</p>
+    <p id="sec_text"> Since 2021</p>
+    {% if session.get("is_logged_in") %}
+        <button id="order_now_btn"
+                onclick="window.location.href='/shop'">{{ session.get("full_name")+", רוצה להזמין?"}}</button>
+    {% else %}
+        <button id="order_now_btn"
+                onclick="window.location.href='/shop'">רעב? בוא נזמין!</button>
+    {% endif %}
+    <br><br><br>
+    </body>
+{% endblock %}
